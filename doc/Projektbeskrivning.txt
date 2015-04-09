@@ -1,0 +1,36 @@
+PAR-64		rx-lamp		12 volt
+Flood 24	5strip		24 volt
+Pixel		robotkort	12 volt
+
+Lamporna får fasta adresser som programmeras in
+Kommunikation sker via standard UART på lagom hög fart då vi har långa kablar
+
+
+Kodstruktur
+
+	Gemensamt libopencm3
+
+
+
+
+Multidrop protokoll
+
+	Förfrågan
+
+		int16_t		ID/typ  (negativa värden är typ)
+		int16_t		kommando
+		int16_t		datalängd
+		uint16_t	checksum
+
+
+	Svar
+		int16_t		ID källa
+		int16_t		svar
+		int16_t		datalängd
+		uint16_t	checksum
+
+
+	Lampa lyssnar efter förfrågan
+		Om förfrågan mottages och är korrekt så svaras det
+
+	När datapaket skickas så efterföljs de också av en checksum

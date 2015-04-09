@@ -1,0 +1,6 @@
+Logg
+
+Lägger till submodul för libopencm3
+
+	$ git submodule add https://github.com/libopencm3/libopencm3
+
