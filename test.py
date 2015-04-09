@@ -21,7 +21,7 @@ def nullfun(*args, **kwargs):
 #TODO: fixa så man märker om ett underkommando misslyckas
 
 debug_print = nullfun
-debug_print = print
+#debug_print = print
 
 
 def cmd(target, cmd_code, send_data=None):
@@ -179,7 +179,7 @@ def test4():
 			time.sleep(1.0)
 
 
-test4()
+#test4()
 
 #test2()
 

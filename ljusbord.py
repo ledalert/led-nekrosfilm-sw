@@ -111,7 +111,7 @@ class par64lampa:
 		testsystem.set_pwm(self.adr, self.channels[2], round(b*4095))
 
 lampa = par64lampa(1, r_comp=0.82, b_comp=0.93)
-lampa2 = par64lampa(2, channels=(3, 4, 5))
+#lampa2 = par64lampa(2, channels=(3, 4, 5))
 
 class ControlPanel(QWidget):
 	def __init__(self, parent, dmx_mon=None):
@@ -126,7 +126,7 @@ class ControlPanel(QWidget):
 		self.channel = list()
 		self.channel = [
 			LightChannel(self, lampa),
-			LightChannel(self, lampa2),
+			#LightChannel(self, lampa2),
 		]
 
 
